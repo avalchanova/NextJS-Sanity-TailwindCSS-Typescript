@@ -1,9 +1,10 @@
 //all the functions to go and grab data:
 
+import { Project } from "@/types/project";
 import { createClient, groq } from "next-sanity";
 
 //using query language GROQ
-export async function getProject() {
+export async function getProjects(): Promise<Project[]> {
     const client = createClient({  // creating a client that can read our content
         // it will only be able to read our content
         projectId: "3rdvltpc",
@@ -12,7 +13,7 @@ export async function getProject() {
     }); // client is created
 
     return client.fetch(
-        groq`*[_type == "projects"]{ 
+        groq`*[_type == "project"]{ 
             _id,
             _createdAt,
             name,
