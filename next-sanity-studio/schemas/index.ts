@@ -1,5 +1,7 @@
 export const schemaTypes = []
 
+
+
 // here we will be listing out new schemas
 // where we tell our studio what fields to have
 
