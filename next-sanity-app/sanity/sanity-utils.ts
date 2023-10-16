@@ -1,6 +1,6 @@
 //all the functions to go and grab data:
 
-import { Project } from "@/types/project";
+import { Project } from "@/types/Project";
 import { createClient, groq } from "next-sanity";
 
 //using query language GROQ
